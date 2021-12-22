@@ -1,4 +1,10 @@
 # gpt3_macro
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vongaisberg/gpt3_macro/Rust)
+![Crates.io](https://img.shields.io/crates/d/gpt3_macro)
+![Lines of code](https://img.shields.io/tokei/lines/github/vongaisberg/gpt3_macro)
+![Crates.io](https://img.shields.io/crates/l/gpt3_macro)
+![Crates.io](https://img.shields.io/crates/v/gpt3_macro)
+
 Rust macro that uses GPT3 codex to generate code at compiletime.
 
 Just describe what you want the function to do and (optionally) define a function header. The macro will generate the sourcecode for you at compiletime.
