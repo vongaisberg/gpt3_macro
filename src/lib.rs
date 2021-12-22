@@ -7,8 +7,42 @@ use std::env;
 
 use serde_json::*;
 
+/// Use GPT3 do generate sourcecode for a function
+/// 
+/// # Parameters
+/// 
+///
+/// You need to set the ```$OPENAI_KEY``` environment variable
+///
+/// # Examples
+/// ## Fibonnacci sequence
+/// ```
+/// use gpt3_macro::*;
+/// 
+/// create_function!("Prints n elements of the fibonnacci sequence" fn fib(n: u64));
+///
+/// fn main() {
+///    
+///    fib(10);
+///
+/// }
+/// ```
+/// 
+///
+/// ## Prime numbers
+/// ```
+/// use gpt3_macro::*;
+/// 
+/// create_function!("Checks if number is prime");
+///
+/// create_function!("Prints all prime numbers lower than n" fn primes(n: u64));
+///
+/// fn main() {
+///     primes(100);
+/// }
+/// ```
 #[proc_macro]
-pub fn gpt3(input: TokenStream) -> TokenStream {
+pub fn create_function(input: TokenStream) -> TokenStream {
     match env::var("OPENAI_KEY") {
         Ok(key) => {
             let input = input.into_iter().collect::<Vec<_>>();

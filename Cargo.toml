@@ -3,11 +3,17 @@ name = "gpt3_macro"
 version = "0.1.0"
 authors = ["Maximilian von Gaisberg <git@vongaisberg.de>"]
 edition = "2021"
+license = "MIT"
+description = "Macro that uses GPT3 codex to generate code at compiletime"
+homepage = "https://github.com/vongaisberg/gpt3_macro/"
+repository = "https://github.com/vongaisberg/gpt3_macro/"
+readme = "README.md"
+keywords = ["macro", "machine-learning", "gpt3"]
+categories = ["development-tools"]
 
 [lib]
 proc-macro = true
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 litrs = "0.2.3"
