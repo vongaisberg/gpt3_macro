@@ -57,8 +57,8 @@ pub fn create_function(input: TokenStream) -> TokenStream {
             }
             let code = code.replace("- >", "->");
 
-            let prompt = format!("// A rust function that {prompt}\\n{code}");
-            println!("{prompt}\n\n\n");
+            let prompt = format!("// A rust function that {}\\n{}", prompt, code);
+            //println!("{prompt}\n\n\n");
             let response =
                 ureq::post("https://api.openai.com/v1/engines/davinci-codex/completions")
                     .set("Content-Type", "application/json")
@@ -81,7 +81,7 @@ pub fn create_function(input: TokenStream) -> TokenStream {
                     let text = &body["choices"][0]["text"].to_string();
                     let text = &text[1..text.len() - 1]; // Remove leading and trailing quotation marks
 
-                    println!("{text}\n\n\n");
+                    //println!("{text}\n\n\n");
 
                     // Only output everything until the end of the first braces-codeblock
                     let mut text_cut = String::new();
@@ -109,7 +109,7 @@ pub fn create_function(input: TokenStream) -> TokenStream {
                         .replace("\\n", "\n")
                         .replace("\\\"", "\"")
                         .replace("\\\'", "\'");
-                    println!("{text}");
+                    //println!("{text}");
 
                     text.parse().unwrap()
                 }

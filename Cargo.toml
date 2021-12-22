@@ -2,7 +2,7 @@
 name = "gpt3_macro"
 version = "0.1.0"
 authors = ["Maximilian von Gaisberg <git@vongaisberg.de>"]
-edition = "2021"
+edition = "2018"
 license = "MIT"
 description = "Macro that uses GPT3 codex to generate code at compiletime"
 homepage = "https://github.com/vongaisberg/gpt3_macro/"
