@@ -10,7 +10,7 @@ repository = "https://github.com/vongaisberg/gpt3_macro/"
 readme = "README.md"
 keywords = ["macro", "machine-learning", "gpt3"]
 categories = ["development-tools"]
-
+exclude = [".github/*", ".gitignore"]
 [lib]
 proc-macro = true
 
