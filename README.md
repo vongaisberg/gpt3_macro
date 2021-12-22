@@ -56,3 +56,18 @@ fn fib (n : u64) {
 | Spend less time coding simple utility functions and save your brainpower for the big problems | Compilation takes way longer |
 | Create more readable sourcecode — the documentation IS the sourcode. | You need to be part of the GPT3 Codex private beta
 | A little nondeterminism during compilation is fun! | GPT3 Codex will not always be free :(|
+
+## Installation
+
+Generate an OpenAI API key at the [OpenAI Account Page](https://beta.openai.com/account/api-keys) and set the ```$OPENAI_KEY``` environment variable
+
+Then execute
+```
+cargo add gpt3_macro
+```
+or manually add 
+```
+gpt3_macro = "0.1.0"
+```
+to your ```Cargo.toml```
+
