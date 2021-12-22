@@ -62,17 +62,17 @@ pub fn create_function(input: TokenStream) -> TokenStream {
             let response =
                 ureq::post("https://api.openai.com/v1/engines/davinci-codex/completions")
                     .set("Content-Type", "application/json")
-                    .set("Authorization", &format!("Bearer {key}"))
+                    .set("Authorization", &format!("Bearer {}", key))
                     .send_string(&format!(
                         "{{
-        \"prompt\": \"{prompt}\",
+        \"prompt\": \"{}\",
         \"temperature\": 0,
         \"max_tokens\": 320,
         \"top_p\": 1,
         \"frequency_penalty\": 0,
         \"best_of\": 3,
         \"presence_penalty\": 0
-      }}"
+      }}", prompt
                     ));
 
             match response {
