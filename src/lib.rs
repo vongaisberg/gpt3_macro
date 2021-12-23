@@ -92,7 +92,7 @@ pub fn create_function_and_tests(input: TokenStream) -> TokenStream {
             //println!("{prompt}\n\n\n");
             let function = query_gpt3(prompt, &key);
 
-            let tests = query_gpt3((function + "\n// 5 tests for the function").replace("\n", "\\n"), &key);
+            let tests = query_gpt3((function + "\n// 5 tests for the function").replace("\n", "\\n").replace("\"", "\\\"").replace("\'", "\\\'"), &key);
 
             tests.parse().unwrap()
         }
