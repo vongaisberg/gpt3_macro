@@ -1,5 +1,5 @@
 # gpt3_macro
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vongaisberg/gpt3_macro/Rust)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vongaisberg/gpt3_macro/build)
 ![Crates.io](https://img.shields.io/crates/d/gpt3_macro)
 ![Lines of code](https://img.shields.io/tokei/lines/github/vongaisberg/gpt3_macro)
 ![Crates.io](https://img.shields.io/crates/l/gpt3_macro)
