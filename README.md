@@ -73,7 +73,7 @@ cargo add gpt3_macro
 ```
 or manually add 
 ```
-gpt3_macro = "0.1.0"
+gpt3_macro = "0.2.2"
 ```
 to your ```Cargo.toml```
 
