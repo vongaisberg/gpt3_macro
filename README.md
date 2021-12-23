@@ -10,12 +10,12 @@ Rust macro that uses GPT3 codex to generate code at compiletime.
 Just describe what you want the function to do and (optionally) define a function header. The macro will generate the sourcecode for you at compiletime.
 
 ## Example 1
-```
+```rust
 create_function!("checks if number is prime" fn is_prime(num: u64) -> bool);
 ```
 will (usually) expand to something like:
 
-```
+```rust
 // A rust function that checks if number is prime
 fn is_prime(num: u64) -> bool {
     if num == 2 {
@@ -36,12 +36,12 @@ fn is_prime(num: u64) -> bool {
 ```
 
 ## Example 2
-```
+```rust
 create_function!("prints n elements of the fibonnacci sequence to stdout" fn fib(n: u64));
 ```
 sometimes expands to:
 
-```
+```rust
 // prints n elements of the fibonnacci sequence to stdout
 fn fib (n : u64) {
     let mut a = 0;
